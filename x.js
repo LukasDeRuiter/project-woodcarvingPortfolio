@@ -4,17 +4,17 @@ let somethingIsSelected = false;
 document.getElementById('humanModelsContainerID').addEventListener('click', function(){
     if(somethingIsSelected == false){
         somethingIsSelected = true;
-        humansToFront();
+        toFront(humansIcon, humanModels);
         selected = 1;
     } 
     else if(somethingIsSelected == true && selected != 1){   
-        humansToFront();
-        animalsBackToStart();
+        toFront(humansIcon, humanModels);
+        backToStart(animalsIcon, animalModels, 5, 15);
         selected = 1;
     }
     else if(somethingIsSelected == true && selected == 1){   
-        humansBackToStart();
-        animalsBackToStart();
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
         somethingIsSelected = false;
     }
   })
@@ -22,26 +22,61 @@ document.getElementById('humanModelsContainerID').addEventListener('click', func
   document.getElementById('animalModelsContainerID').addEventListener('click', function(){
     if(somethingIsSelected == false){
         somethingIsSelected = true;
-        animalsToFront();
+        toFront(animalsIcon, animalModels);
         selected = 2;
     }
     else if(somethingIsSelected == true && selected != 2){   
-         animalsToFront();
-         humansBackToStart();
+        toFront(animalsIcon, animalModels);
+         backToStart(humansIcon, humanModels, 5, 5);
          selected = 2;
     } 
     else if(somethingIsSelected == true && selected == 2){ 
-        animalsBackToStart();
-        humansBackToStart(); 
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(humansIcon, humanModels, 5, 5);
         somethingIsSelected = false;
     }
   })
 
+let animalsIcon = document.getElementById('animalModelsContainerID');
+let animalModels = document.getElementsByClassName("animalModels");
+
+let humansIcon = document.getElementById('humanModelsContainerID');
+let humanModels = document.getElementsByClassName("humanModels");
 
 
 
+  function backToStart(chosenIcon, chosenModels, topAmount, leftAmount){
+    chosenIcon.style.width = "86px";
+    chosenIcon.style.height = "86px";
+    chosenIcon.style.top = `${topAmount}%`;
+    chosenIcon.style.left = `${leftAmount}%`;
+    chosenIcon.style.marginTop = "-43px";
+    chosenIcon.style.marginLeft = "-43px";
+  let models = chosenModels;
+  for(let i = 0; i < models.length; i++){
+      models[i].style.display = "none";
+  }
+  chosenIcon.ontransitionend = function() {
+      let models = chosenModels;
+      for(let i = 0; i < models.length; i++){
+          models[i].style.display = "none";
+      }}}
 
-    
+
+      function toFront(chosenIcon, chosenModels){
+        chosenIcon.style.width = "500px";
+        chosenIcon.style.height = "500px";
+        chosenIcon.style.top = "50%";
+        chosenIcon.style.left = "50%";
+        chosenIcon.style.marginTop = "-250px";
+        chosenIcon.style.marginLeft = "-250px";
+        chosenIcon.ontransitionend = function() {
+    let models = chosenModels;
+    for(let i = 0; i < models.length; i++){
+        models[i].style.display = "block";
+    }}}
+
+    /*
   
   function animalsBackToStart(){
       animalsIcon = document.getElementById('animalModelsContainerID');
@@ -106,3 +141,5 @@ document.getElementById('humanModelsContainerID').addEventListener('click', func
         for(let i = 0; i < models.length; i++){
             models[i].style.display = "block";
         }}}
+
+        */
