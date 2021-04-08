@@ -1,5 +1,8 @@
 let selected
 let somethingIsSelected = false;
+let chosenModel;
+let chosenModelCounter;
+let imgOnScreen = document.getElementById('viewedImgID');
 
 document.getElementById('humanModelsContainerID').addEventListener('click', function(){
     if(somethingIsSelected == false){
@@ -76,11 +79,34 @@ let humanModels = document.getElementsByClassName("humanModels");
         models[i].style.display = "block";
     }}}
 
+    document.getElementById('model1ID').addEventListener('click', function(){
+        chosenModel = 1;
+        chosenModelCounter = 1;
+    })
+    document.getElementById('model2ID').addEventListener('click', function(){
+        chosenModel = 2;
+        chosenModelCounter = 1;
+    })
+    document.getElementById('model3ID').addEventListener('click', function(){
+        chosenModel = 3;
+        chosenModelCounter = 1;
+    })
 
     document.querySelectorAll(".humanModels").forEach(humanModels => humanModels.addEventListener('click', function(event){
         event.stopPropagation();
-        document.getElementById('imageViewerID').style.display = "grid";
+        document.getElementById('imageViewerID').style.display = "flex";
         document.getElementById('imageBackground').style.filter = "brightness(50%)";
+        switch(chosenModel){
+            case 1:
+                imgOnScreen.src = "images/figures/figure1pic1.jpg";
+                break;
+            case 2:
+                imgOnScreen.src = "images/figures/figure2pic1.jpg";
+                break;
+            case 3:
+                imgOnScreen.src = "images/figures/figure3pic1.jpg";
+                break;
+    }
     }))
 
     document.getElementById('closeBtnID').addEventListener('click',function(){
@@ -89,6 +115,28 @@ let humanModels = document.getElementsByClassName("humanModels");
     })
 
 
+    document.getElementById("forwardsBtnID").addEventListener('click', function(){
+        if(chosenModelCounter >= 0 && chosenModelCounter <= 3){ 
+              chosenModelCounter += 1;
+              imgOnScreen.src = `images/figures/figure${chosenModel}pic${chosenModelCounter}.jpg`;
+        }
+        else if (chosenModelCounter === 4){
+            chosenModelCounter = 1;
+            imgOnScreen.src = `images/figures/figure${chosenModel}pic${chosenModelCounter}.jpg`;
+        }
+    })
+
+
+    document.getElementById("backwardsBtnID").addEventListener('click', function(){
+        if(chosenModelCounter >= 2 && chosenModelCounter <= 4){ 
+            chosenModelCounter -= 1;
+            imgOnScreen.src = `images/figures/figure${chosenModel}pic${chosenModelCounter}.jpg`;
+      }
+      else if (chosenModelCounter === 1){
+          chosenModelCounter = 4;
+          imgOnScreen.src = `images/figures/figure${chosenModel}pic${chosenModelCounter}.jpg`;
+      }
+    })
 
     /*
   function animalsBackToStart(){
