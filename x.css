@@ -52,7 +52,13 @@ body{
   border: 3px solid black;
   border-radius: 50%;
   z-index: 3;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
+  border: 3px solid rgb(15, 152, 231);
+}
+.humanModels:hover{
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 5px rgb(15, 152, 231), 0 0 15px rgb(15, 152, 231) , 0 0 30px rgb(15, 152, 231), 0 0 45px rgb(15, 152, 231);
 }
 
 .human{
@@ -109,4 +115,34 @@ grid-row-end: 3;
   grid-column-end: 5;
   grid-row-start: 4;
   grid-row-end: 5;
+  }
+
+
+  .imageViewer{
+    background-color: green;
+    display: none;
+    position: absolute;
+    justify-items: center;
+    align-items: center;
+    width: 700px;
+    height: 700px;
+    margin: 0;
+    margin-top: -350px;
+    margin-left: -350px;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+  }
+
+  .imageScreenBackground{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .closeBtn{
+    width: 10px;
+    height: 10px;
   }

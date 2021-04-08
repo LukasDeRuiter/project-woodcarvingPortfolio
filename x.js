@@ -76,8 +76,21 @@ let humanModels = document.getElementsByClassName("humanModels");
         models[i].style.display = "block";
     }}}
 
+
+    document.querySelectorAll(".humanModels").forEach(humanModels => humanModels.addEventListener('click', function(event){
+        event.stopPropagation();
+        document.getElementById('imageViewerID').style.display = "grid";
+        document.getElementById('imageBackground').style.filter = "brightness(50%)";
+    }))
+
+    document.getElementById('closeBtnID').addEventListener('click',function(){
+        document.getElementById('imageViewerID').style.display = "none";
+        document.getElementById('imageBackground').style.filter = "brightness(100%)";
+    })
+
+
+
     /*
-  
   function animalsBackToStart(){
       animalsIcon = document.getElementById('animalModelsContainerID');
       animalsIcon.style.width = "86px";
@@ -141,5 +154,4 @@ let humanModels = document.getElementsByClassName("humanModels");
         for(let i = 0; i < models.length; i++){
             models[i].style.display = "block";
         }}}
-
         */
