@@ -13,11 +13,19 @@ document.getElementById('humanModelsContainerID').addEventListener('click', func
     else if(somethingIsSelected == true && selected != 1){   
         toFront(humansIcon, humanModels);
         backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
         selected = 1;
     }
     else if(somethingIsSelected == true && selected == 1){   
         backToStart(humansIcon, humanModels, 5, 5);
         backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
         somethingIsSelected = false;
     }
   })
@@ -30,12 +38,125 @@ document.getElementById('humanModelsContainerID').addEventListener('click', func
     }
     else if(somethingIsSelected == true && selected != 2){   
         toFront(animalsIcon, animalModels);
-         backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
          selected = 2;
     } 
     else if(somethingIsSelected == true && selected == 2){ 
-        backToStart(animalsIcon, animalModels, 5, 15);
         backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+        somethingIsSelected = false;
+    }
+  })
+
+  document.getElementById('miniatureModelsContainerID').addEventListener('click', function(){
+    if(somethingIsSelected == false){
+        somethingIsSelected = true;
+        toFront(miniatureIcon, miniatureModels);
+        selected = 3;
+    }
+    else if(somethingIsSelected == true && selected != 3){   
+        toFront(miniatureIcon, miniatureModels);
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+         selected = 3;
+    } 
+    else if(somethingIsSelected == true && selected == 3){ 
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+        somethingIsSelected = false;
+    }
+  })
+
+  document.getElementById('wowModelsContainerID').addEventListener('click', function(){
+    if(somethingIsSelected == false){
+        somethingIsSelected = true;
+        toFront(wowIcon, wowModels);
+        selected = 4;
+    }
+    else if(somethingIsSelected == true && selected != 4){   
+        toFront(wowIcon, wowModels);
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+         selected = 4;
+    } 
+    else if(somethingIsSelected == true && selected == 4){ 
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+        somethingIsSelected = false;
+    }
+  })
+
+  document.getElementById('pokemonModelsContainerID').addEventListener('click', function(){
+    if(somethingIsSelected == false){
+        somethingIsSelected = true;
+        toFront(pokemonIcon, pokemonModels);
+        selected = 5;
+    }
+    else if(somethingIsSelected == true && selected != 5){   
+        toFront(pokemonIcon, pokemonModels);
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+         selected = 5;
+    } 
+    else if(somethingIsSelected == true && selected == 5){ 
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
+        somethingIsSelected = false;
+    }
+  })
+
+
+  document.getElementById('zeldaModelsContainerID').addEventListener('click', function(){
+    if(somethingIsSelected == false){
+        somethingIsSelected = true;
+        toFront(zeldaIcon, zeldaModels);
+        selected = 6;
+    }
+    else if(somethingIsSelected == true && selected != 6){   
+        toFront(zeldaIcon, zeldaModels);
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+         selected = 6;
+    } 
+    else if(somethingIsSelected == true && selected == 6){ 
+        backToStart(humansIcon, humanModels, 5, 5);
+        backToStart(animalsIcon, animalModels, 5, 15);
+        backToStart(miniatureIcon, miniatureModels, 5, 25);
+        backToStart(wowIcon, wowModels, 5, 35);
+        backToStart(pokemonIcon,pokemonModels, 5, 45);
+        backToStart(zeldaIcon, zeldaModels, 5, 55);
         somethingIsSelected = false;
     }
   })
@@ -45,6 +166,18 @@ let animalModels = document.getElementsByClassName("animalModels");
 
 let humansIcon = document.getElementById('humanModelsContainerID');
 let humanModels = document.getElementsByClassName("humanModels");
+
+let miniatureIcon = document.getElementById('miniatureModelsContainerID');
+let miniatureModels = document.getElementsByClassName("miniatureModels");
+
+let wowIcon = document.getElementById('wowModelsContainerID');
+let wowModels = document.getElementsByClassName("wowModels");
+
+let pokemonIcon = document.getElementById('pokemonModelsContainerID');
+let pokemonModels = document.getElementsByClassName("pokemonModels");
+
+let zeldaIcon = document.getElementById('zeldaModelsContainerID');
+let zeldaModels = document.getElementsByClassName("zeldaModels");
 
 
 
