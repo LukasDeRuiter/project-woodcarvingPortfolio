@@ -408,6 +408,7 @@ let armyModels = document.getElementsByClassName("armyModels");
         models[i].style.display = "block";
     }}}
 
+    
     document.getElementById('model1ID').addEventListener('click', function(){
         chosenModel = 1;
         chosenModelCounter = 1;

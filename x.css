@@ -165,6 +165,11 @@ body{
   transition: all 2s ease-in;
 }
 
+.animal:hover{
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 5px rgb(252, 50, 50), 0 0 15px rgb(252, 50, 50) , 0 0 30px rgb(252, 50, 50), 0 0 45px rgb(252, 50, 50);
+}
 .animal{
   border: 3px solid rgb(252, 50, 50);
 }
@@ -714,6 +719,8 @@ body{
 .army{
   border: 3px solid rgb(58, 58, 58);
 }
+
+/* model locations in grid */
 .model1ID{
 grid-column-start: 2;
 grid-column-end: 3;
@@ -738,10 +745,37 @@ grid-row-end: 3;
 .model4ID{
   grid-column-start: 4;
   grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  }
+
+.model5ID{
+  grid-column-start: 4;
+  grid-column-end: 5;
   grid-row-start: 4;
   grid-row-end: 5;
   }
 
+.model6ID{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  }
+
+.model7ID{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  }
+
+.model8ID{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  }
 
   .imageViewer{
     background-color: green;
