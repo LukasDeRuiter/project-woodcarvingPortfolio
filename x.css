@@ -118,7 +118,7 @@ body{
 
 .animalContainer:hover{
   box-shadow: 0 0 10px rgb(252, 50, 50), 0 0 40px rgb(252, 50, 50) , 0 0 80px rgb(252, 50, 50),
-   0 0 100px rgb(252, 50, 50) , 0 0 130px rgb(252, 50, 50), 0 0 160px rgb(252, 50, 50), 0 0 190px rgb(252, 50, 50);
+   0 0 100px rgb(252, 50, 50), 0 0 130px rgb(252, 50, 50), 0 0 160px rgb(252, 50, 50), 0 0 190px rgb(252, 50, 50);
 }
 
 .animalContainer::before{
@@ -162,14 +162,16 @@ body{
   border: 3px solid black;
   border-radius: 50%;
   z-index: 3;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
+  border: 3px solid rgb(252, 50, 50);
 }
 
-.animal:hover{
+.animalModels:hover{
   width: 120px;
   height: 120px;
   box-shadow: 0 0 5px rgb(252, 50, 50), 0 0 15px rgb(252, 50, 50) , 0 0 30px rgb(252, 50, 50), 0 0 45px rgb(252, 50, 50);
 }
+
 .animal{
   border: 3px solid rgb(252, 50, 50);
 }
